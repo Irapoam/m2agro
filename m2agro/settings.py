@@ -48,6 +48,9 @@ M2AGRO_APPS = (
     'api',
     'core',
     'm2agro',
+    'produtos',
+    'safras',
+    'servicos',
 )
 INSTALLED_APPS = INSTALLED_APPS + OTHER_APPS + M2AGRO_APPS
 
