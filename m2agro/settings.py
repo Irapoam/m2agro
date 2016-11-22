@@ -39,6 +39,19 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 )
 
+OTHER_APPS = (
+    'rest_framework',
+    'rest_framework.authtoken',
+)
+
+M2AGRO_APPS = (
+    'api',
+    'core',
+    'm2agro',
+)
+INSTALLED_APPS = INSTALLED_APPS + OTHER_APPS + M2AGRO_APPS
+
+
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
