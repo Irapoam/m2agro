@@ -7,8 +7,6 @@ migrate:
 migrations:
 	python3 manage.py makemigrations --settings=m2agro.settings_local
 install:
-	npm install
-	# bower install
 	pip3 install -r requirements.txt
 	make migrate
 user:
