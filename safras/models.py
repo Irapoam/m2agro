@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models import Sum
 
 from core.models import TimeStampedModel
 
@@ -9,3 +10,11 @@ class Safra(TimeStampedModel):
 
     def __str__(self):
         return self.nome
+
+
+    def atualizar_servicos(self):
+        for servico in self.servicos.all():
+            import pdb; pdb.set_trace()
+            total = servico.servico_produto.aggregate(Sum('custo_total'))['custo_total__sum']
+            servico.custo_total = total
+            servico.save()

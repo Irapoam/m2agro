@@ -18,4 +18,4 @@ class ServicoProdutoSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = ServicoProduto
-        fields = ['id', 'quantidade', 'produto','servico']
+        fields = ['id', 'quantidade','custo_total', 'produto','servico']
