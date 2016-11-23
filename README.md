@@ -2,8 +2,8 @@
 
 - [Produtos](#produtos)
 - [Safras](#safras)
-- [Serviços](#servicos)
-- [Serviços x Produtos] (#servicos-produtos)
+- [Serviços](#serviços)
+- [Serviços x Produtos] (#servicos-e-produtos)
 
 ## Produtos
 
@@ -62,7 +62,7 @@ BODY:
 }
 ```
 
-#### GET /safras/:id:/atualizar_servicos/
+#### GET /safras/:id/atualizar_servicos/
 Atualiza os valores dos serviços da safra de acordo com os produtos utilizados por ele.
 Outra alternativa é ir no django admin e selecionar a(s) safra(s) e selecionar a opção de atualizar os valores.
 
@@ -84,3 +84,46 @@ BODY:
     "custo_total": "0.0" // será calculado posteriormente através da ação de atualizar os valores dos serviços
 }
 ```
+
+#### GET /servicos/:id
+
+```javascript
+{
+    "id": 1,
+    "nome": "Plantio",
+    "data_inicial": "2017-01-02",
+    "data_final": "2017-01-10",
+    "safra": 1,
+    "custo_total": "0.0"
+}
+```
+
+## Servicos-e-produtos
+
+### Create
+
+#### POST /servicos-e-produtos
+
+BODY:
+
+```javascript
+{
+    "quantidade": "5",
+    "produto": 1,
+    "servico": 1,
+}
+```
+
+#### GET /servicos-e-produtos/:id
+
+```javascript
+{
+    "id": 1,
+    "quantidade": 5,
+    "produto": 1,
+    "servico": 1
+}
+```
+
+
+
