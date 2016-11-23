@@ -120,6 +120,9 @@ BODY:
 {
     "id": 1,
     "quantidade": 5,
+    // Valor calculado quando um produto é adicionado a um serviço.
+    // Preço Atual do produto * quantidade utilizada.
+    "custo_total": "150.00", 
     "produto": 1,
     "servico": 1
 }
