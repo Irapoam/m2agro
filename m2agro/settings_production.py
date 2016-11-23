@@ -11,3 +11,6 @@ DEBUG = False
 #         'PASSWORD': 'dbpass',
 #     }
 # }
+
+MEDIA_ROOT = '/home/webapps/m2agro/media'
+STATIC_ROOT = '/home/webapps/m2agro/static_collected'

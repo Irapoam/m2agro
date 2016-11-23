@@ -16,5 +16,5 @@ class Servico(TimeStampedModel):
 
 class ServicoProduto(models.Model):
     quantidade = models.IntegerField(default=0)
-    servico = models.ForeignKey('servicos.Servico')
-    produto = models.ForeignKey('produtos.Produto')
+    servico = models.ForeignKey('servicos.Servico', related_name='servico_produto')
+    produto = models.ForeignKey('produtos.Produto', related_name='servico_produto')

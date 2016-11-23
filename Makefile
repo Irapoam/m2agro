@@ -24,19 +24,18 @@ run_celery:
 	celery worker -l info --beat --app=m2agro.celery:app
 	
 initial_deploy:
-	cap production setup:install_requirements_server
-	cap production deploy
-	cap production setup:create_folders
-	cap production setup:install_requirements
-	cap production setup:conf_files
-	cap production setup:migrations
-	cap production setup:collect_static
-	cap production setup:restart_app
-	
+	cap $(stage) setup:install_requirements_server
+	cap $(stage) deploy
+	cap $(stage) setup:create_folders
+	cap $(stage) setup:install_requirements
+	cap $(stage) setup:conf_files
+	cap $(stage) setup:migrations
+	cap $(stage) setup:collect_static
+	cap $(stage) setup:restart_app
 
 deploy:
-	cap production deploy
-	cap production setup:install_requirements
-	cap production setup:migrations
-	cap production setup:collect_static
-	cap production setup:restart_app
+	cap $(stage) deploy
+	cap $(stage) setup:install_requirements
+	cap $(stage) setup:migrations
+	cap $(stage) setup:collect_static
+	cap $(stage) setup:restart_app
