@@ -90,10 +90,21 @@ WSGI_APPLICATION = 'm2agro.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'HOST': 'ec2-54-235-181-120.compute-1.amazonaws.com',  # or host database
+        'PORT': '5432',
+        'NAME': 'daos9bjcavul86',
+        'USER': 'ibwwdpmbkqjkdw',
+        'PASSWORD': 'cznPsgEbnkIQN_dJZGo4ryaRkC',
     }
 }
 
